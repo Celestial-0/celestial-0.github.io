@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .symbol {
+      stroke: #005785; /* Light mode: deep indigo */
+    }
+    @media (prefers-color-scheme: dark) {
+      .symbol {
+        stroke: #78c08b; /* Dark mode: phosphor green */
+      }
+    }
+  </style>
+  <path class="symbol" d="M 25 25 L 55 50 L 25 75" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <line class="symbol" x1="60" y1="75" x2="85" y2="75" stroke-width="12" stroke-linecap="round" />
+</svg>

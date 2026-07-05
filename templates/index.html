@@ -1,0 +1,161 @@
+{% set exp = get_page(path="experience.md") %}
+{% set proj = get_page(path="projects.md") %}
+{% set skills = get_page(path="skills.md") %}
+{% set bg = get_page(path="background.md") %}
+{% set contact = get_page(path="contact.md") %}
+{% set blogs = get_page(path="blogs.md") %}
+{% set research = get_page(path="research.md") %}
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ config.title }}</title>
+  <meta name="description" content="{{ config.description }}">
+  <meta name="author" content="Yash Kumar Singh">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="{{ config.title }}">
+  <meta property="og:description" content="{{ config.description }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Prevent flash of wrong theme — runs before first paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('yk-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    }());
+  </script>
+
+  <!-- Fonts: JetBrains Mono (display identity) + Geist (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Primary navigation">
+  <a href="#top" class="nav-wordmark" aria-label="Home">
+    panic<span class="dot">!()</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#experience">experience</a></li>
+    <li><a href="#research">research</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#blogs">blogs</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#background">background</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <button
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch color theme"
+  >[ light ]</button>
+</nav>
+
+<main>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="top">
+    <div class="hero-text reveal">
+      {{ section.content | safe }}
+    </div>
+    <div class="avatar-wrap">
+      <img
+        src="/images/Myself.png"
+        alt="Portrait of Yash Kumar Singh"
+        class="avatar-photo"
+        loading="eager"
+        width="188"
+        height="188"
+      >
+      <div class="avatar-location" aria-label="Location: Delhi, India">
+        <span>⚲</span> Delhi, India
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+  <section id="experience" class="reveal">
+    <div class="section-marker" aria-hidden="true">experience</div>
+    <div class="md-body" id="expBody">{{ exp.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ RESEARCH PAPERS ═══════════════ -->
+  <section id="research" class="reveal">
+    <div class="section-marker" aria-hidden="true">research papers</div>
+    <div class="md-body" id="researchBody">{{ research.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects" class="reveal">
+    <div class="section-marker" aria-hidden="true">software</div>
+    <div class="md-body" id="projBody">{{ proj.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills" class="reveal">
+    <div class="section-marker" aria-hidden="true">skills</div>
+    <div class="md-body">{{ skills.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ BLOGS ═══════════════ -->
+  <section id="blogs" class="reveal">
+    <div class="section-marker" aria-hidden="true">blogs</div>
+    <div class="md-body" id="blogsBody">{{ blogs.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ BACKGROUND ═══════════════ -->
+  <section id="background" class="reveal">
+    <div class="section-marker" aria-hidden="true">background</div>
+    <div class="md-body">{{ bg.content | safe }}</div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="reveal">
+    <div class="section-marker" aria-hidden="true">contact</div>
+    <div class="md-body">{{ contact.content | safe }}</div>
+  </section>
+
+</main>
+
+<!-- Floating Search Button (Bottom Right) -->
+<button id="searchToggle" class="search-fab" aria-label="Open search (Cmd+K)">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+</button>
+
+<!-- ═══════════════ SEARCH MODAL (Spotlight) ═══════════════ -->
+<div id="searchModal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="searchInput">
+  <div class="search-backdrop" id="searchBackdrop"></div>
+  <div class="search-container">
+    <div class="search-input-wrapper">
+      <span class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+      <input type="text" id="searchInput" placeholder="Search sections, projects, skills..." autocomplete="off" spellcheck="false" aria-label="Search site content">
+      <span class="search-shortcut-hint">ESC</span>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">Type to search...</div>
+    </div>
+    <div class="search-footer">
+      <span><kbd>↵</kbd> Select</span>
+      <span><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span>
+      <span><kbd><span class="cmd-icon">⌘</span></kbd> <kbd>K</kbd> / <kbd>/</kbd> Open</span>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts — deferred so they run after DOM is ready -->
+<script src="/script.js" defer></script>
+
+</body>
+</html>
