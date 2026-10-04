@@ -8,12 +8,12 @@ render = false
 *Selected software, 2025 – 2026*
 
 ### [01. OpenTier → High-Performance AI Knowledge Infrastructure](https://opentier.yashkumarsingh.me)
-*Jan 2026*
+*Jan 2026 – Present*
 
-A Rust API gateway and Python intelligence engine connected over gRPC, cutting round-trip latency 30%. A retrieval-augmented pipeline runs on PostgreSQL with pgvector and local sentence-transformer embeddings, and token streams reach the client through Rust-bridged server-sent events.
+Architected a dual-runtime microservices platform with a low-overhead Rust (Axum/Tokio) gateway and a decoupled Python intelligence engine over gRPC/HTTP/2, enforcing token-bucket rate limiting and sub-millisecond route dispatch. Engineered a multi-tenant hybrid RAG pipeline on Qdrant that fuses 3072-dimensional dense embeddings with sparse BM25 indices via server-side Reciprocal Rank Fusion, delivering sub-100ms retrieval under strict tenant data isolation.
 
-- **Metrics:** 30% ↓ round-trip latency · sub-120ms retrieval · 50 concurrent streams
-- **Stack:** Rust (Axum, Tokio, SQLx) · Python (grpcio, SQLAlchemy) · Next.js · PostgreSQL/pgvector · gRPC · Docker · SSE
+- **Metrics:** sub-100ms hybrid retrieval · sub-ms route dispatch · 3072d dense + BM25 fusion via RRF · strict tenant isolation
+- **Stack:** Rust (Axum, Tokio) · Python (gRPC, asyncio) · Next.js 16 · Qdrant · Redis 8 Streams · PostgreSQL 18 · gRPC/HTTP/2 · SSE · Docker
 - **Links:** [GitHub ↗](https://github.com/Celestial-0/OpenTier) [Docs ↗](https://celestial-0.github.io/OpenTier) [Live ↗](https://opentier.yashkumarsingh.me)
 
 ### [02. Nyx → Decentralized End-to-End Encrypted Chat Platform](https://nyx0.vercel.app)
