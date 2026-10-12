@@ -7,8 +7,8 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-title = "Yash Kumar Singh — Software Engineer"
-description = "Portfolio of Yash Kumar Singh — software engineer building backend systems, real-time applications, and AI-powered software."
+title = "Yash Kumar Singh · Software Engineer"
+description = "Portfolio of Yash Kumar Singh, software engineer building backend systems, realtime applications, and AI software."
 
 [extra]
 # No theme or javascript configurations needed.

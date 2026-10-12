@@ -3,7 +3,7 @@ title = "Skills"
 render = false
 +++
 
-## 05 — Skills
+## Skills
 
 | Category | Technologies |
 |---|---|

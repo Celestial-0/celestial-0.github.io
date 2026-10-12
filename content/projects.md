@@ -3,12 +3,12 @@ title = "Projects"
 render = false
 +++
 
-## 03 — Projects
+## Projects
 
-*Selected software, 2025 – 2026*
+*Selected software, 2025 to 2026*
 
 ### [01. OpenTier → High-Performance AI Knowledge Infrastructure](https://opentier.yashkumarsingh.me)
-*Jan 2026 – Present*
+*Jan 2026 to Present*
 
 Architected a dual-runtime microservices platform with a low-overhead Rust (Axum/Tokio) gateway and a decoupled Python intelligence engine over gRPC/HTTP/2, enforcing token-bucket rate limiting and sub-millisecond route dispatch. Engineered a multi-tenant hybrid RAG pipeline on Qdrant that fuses 3072-dimensional dense embeddings with sparse BM25 indices via server-side Reciprocal Rank Fusion, delivering sub-100ms retrieval under strict tenant data isolation.
 
@@ -37,7 +37,7 @@ Engineered a contest aggregation system that polls contest schedules from 4+ com
 ### [04. TrueFare → Full-Stack Real-Time Ride-Hailing Platform](https://truefare.yashkumarsingh.me)
 *Aug 2025*
 
-Built a real-time fare-bidding and ride-hailing system utilizing WebSockets for live driver-rider messaging and sub-500ms geolocation synchronization under concurrent load.
+Built a real-time fare-bidding and ride-hailing system using WebSockets for live driver-rider messaging and sub-500ms geolocation synchronization under concurrent load.
 
 - **Metrics:** 100+ concurrent users · <500ms sync latency · live fare bidding
 - **Stack:** React Native (Expo) · TypeScript · WebSocket · Node.js · MongoDB · Socket.io · Express · Zod

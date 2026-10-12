@@ -1,11 +1,11 @@
 +++
-title = "Yash Kumar Singh — Software Engineer"
-description = "Portfolio of Yash Kumar Singh — software engineer building backend systems, real-time applications, and AI-powered software."
+title = "Yash Kumar Singh · Software Engineer"
+description = "Portfolio of Yash Kumar Singh, software engineer building backend systems, real-time applications, and AI-powered software."
 +++
 
 # Yash Kumar Singh
 
-**Software Engineer — Backend Systems & AI Applications**
+**Software Engineer · Backend Systems & AI Applications**
 
 I build backend systems, real-time applications, and AI-powered software.
 My work spans distributed APIs, retrieval-augmented applications, developer infrastructure,
